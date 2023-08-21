@@ -73,10 +73,10 @@ burger((burger)=>{
 
 
 function burger(callback){
-    setTimeout((=>{
+    setTimeout(()=> {
         console.log("order is placed");
         callback(burger);
-    },500))
+    },500)
 }
 
 

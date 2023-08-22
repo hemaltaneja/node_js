@@ -60,18 +60,6 @@
 // })
 
 //-------------------------------------------------------------------------
-
-getburger((burger)=>{
-    getsauce(burger,(sauce)=>{
-        gettikki(burger,sauce,(tikki)=>{
-            getbread(burger,sauce,tikki,(bread)=>{
-                console.log("burger is Ready")
-            })
-        })
-    })
-})
-
-
 function getburger(callback){
     setTimeout(()=> {
         const burger  ="🍔"
@@ -97,9 +85,22 @@ function getbread(bread ,tikki ,sauce , burger , callback){
     setTimeout(()=> {
         const bread = "🍞"
         console.log("bread is added");
-         callback();
+         callback(bread);
     },500)
 }
+
+getburger((burger)=>{
+    getsauce(burger,(sauce)=>{
+        gettikki(burger,sauce,(tikki)=>{
+            getbread(burger,sauce,tikki,(bread)=>{
+                console.log("burger is Ready")
+            })
+        })
+    })
+})
+
+
+
 
 
 

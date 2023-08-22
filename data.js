@@ -61,10 +61,10 @@
 
 //-------------------------------------------------------------------------
 
-burger((burger)=>{
-    sauce(burger,(sauce)=>{
-        tikki(burger,sauce,(tikki)=>{
-            bread(bread,sauce,tikki,(bread)=>{
+getburger((burger)=>{
+    getsauce(burger,(sauce)=>{
+        gettikki(burger,sauce,(tikki)=>{
+            getbread(burger,sauce,tikki,(bread)=>{
                 console.log("burger is Ready")
             })
         })
@@ -72,12 +72,46 @@ burger((burger)=>{
 })
 
 
-function burger(callback){
+function getburger(callback){
     setTimeout(()=> {
+        const burger  ="🍔"
         console.log("order is placed");
         callback(burger);
     },500)
 }
+function getsauce(burger , callback){
+    setTimeout(()=> {
+        const sauce = "🍅"
+        console.log("Sauce is added");
+        callback(sauce);
+    },500)
+}
+function gettikki(tikki ,sauce , burger , callback){
+    setTimeout(()=> {
+        const tikki = "🥪"
+        console.log("tikki is added");
+        callback(tikki);
+    },500)
+}
+function getbread(bread ,tikki ,sauce , burger , callback){
+    setTimeout(()=> {
+        const bread = "🍞"
+        console.log("bread is added");
+         callback();
+    },500)
+}
+
+
+
+
+
+
+
+
+
+// placeholder()
+
+
 
 
 
